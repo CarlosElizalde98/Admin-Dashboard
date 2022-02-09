@@ -85,6 +85,7 @@ header {
 #user-info {
     display: grid;
     grid-template-rows: repeat(2, 40px);
+    grid-template-columns:0.2fr 1fr;
     justify-content: start;
     padding: 5%;
     margin-bottom: 2%;
@@ -92,6 +93,11 @@ header {
 
 #user-info h1 {
     place-self: start;
+    font-size: 1.5rem;
+}
+
+#user-info #profile-icon {
+    grid-row: span 2;
 }
 
 .main-content {
@@ -176,9 +182,9 @@ header {
 }
 
 .nav-button {
-    height: 50px;
+    height: 40px;
     width: 100px;
-    border-radius: 12px;
+    border-radius: 20px;
     place-self: center;
     background-color: var(--sidebar-color);
     color: var(--dashboard-text-color);
