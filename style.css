@@ -37,9 +37,13 @@ header {
     display: grid;
     grid-column: 2;
     column-gap: 10px;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 0.25fr repeat(2, 1fr);
 }
 
+#search-icon {
+    justify-self: end;
+    align-self: center;
+}
 .sidebar {
     background-color: var(--sidebar-color);
     color: var(--dashboard-text-color);
