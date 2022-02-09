@@ -79,11 +79,18 @@ header {
 
 #login-corner {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 0.1fr repeat(2, 0.2fr);
+    justify-content: center;
+    align-content: center;
 }
 
 #login-corner h2 {
     grid-column: 3;
+    justify-self: start;
+}
+
+#bell-icon, #login-icon {
+    place-self: center;
 }
 
 #user-info {
