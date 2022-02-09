@@ -12,17 +12,22 @@ body {
     font-family: 'Rubik', sans-serif;
 }
 
+header {
+    display: flex;
+    flex-direction: column;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 0.5fr 0.5fr repeat(3, 1fr);
     min-width: 100vw;
     min-height: 100vh;
 }
 
 .navbar {
     display: grid;
-    grid-template-columns: 1fr 2fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 0.2fr 0.2fr 0.2fr;
     grid-template-rows: 1fr;
 
 }
@@ -40,6 +45,7 @@ body {
     display: grid;
     grid-column: 1;
     grid-row: 1 / -1;
+    grid-template-rows: 0.5fr repeat(2, 1fr);
 }
 
 #sidebar-menu {
@@ -51,13 +57,34 @@ body {
     padding-left: 20px;
 }
 
+#login-corner {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#login-corner h2 {
+    grid-column: 3;
+}
+
+#user-info {
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+    justify-content: start;
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+#user-info h1 {
+    place-self: start;
+}
+
 .main-content {
     display: grid;
     gap: 25px 20px;
     grid-column: 2;
     grid-row: 2 / -1;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: 0.5fr repeat(4, 1fr);
     background-color: var(--main-content-color);
     align-content: space-evenly;
     padding-left: 3%;
@@ -82,22 +109,26 @@ body {
     gap: 20px 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
-
-
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    background-color: white;
-    border-radius: 5px;
+    display: grid;
+    grid-template-rows: repeat(3, 0.5fr);
+    align-items: center;
+    justify-items: center;
+    background-color: var(--dashboard-text-color);
+    padding: 10px;
+    
 }
 
 .announcements {
     grid-column: 3;
     grid-row: 2 / 3;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    background-color: var(--dashboard-text-color);
+    border-radius: 5px;
+    row-gap: 10px;
 }
 
 .announcement-header {
@@ -120,4 +151,12 @@ body {
     width: 100px;
     border-radius: 12px;
     place-self: center;
+    background-color: var(--sidebar-color);
+    color: var(--dashboard-text-color);
+    border-style: none;
+}
+
+.main-header, .announcement-header {
+    font-weight: bold;
+    font-size: 1.2rem;
 }
