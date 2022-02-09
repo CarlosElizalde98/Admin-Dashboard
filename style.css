@@ -4,6 +4,7 @@
  --main-content-color:#ccebff;
  --dashboard-text-color: white;
  --sidebar-color: #007acc;
+ --search-bar-color: #e5e7eb;
 }
 
 body {
@@ -33,7 +34,6 @@ header {
 
 }
 .search {
-    background-color: gray;
     display: grid;
     grid-column: 2;
     column-gap: 10px;
@@ -188,4 +188,13 @@ header {
 .main-header, .announcement-header, .trending-header {
     font-weight: bold;
     font-size: 1.2rem;
+}
+
+input[type=text] {
+    width: 500px;
+    height: 20px;
+    border-radius: 12px;
+    border-style: none;
+    place-self: center;
+    background-color: var(--search-bar-color);
 }
