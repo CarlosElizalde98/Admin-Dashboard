@@ -19,7 +19,7 @@ header {
     display: flex;
     flex-direction: column;
 }
-
+/*Controls Grid Setup for Entire Page.*/
 .container {
     display: grid;
     grid-template-columns: 1fr 4fr;
@@ -28,12 +28,48 @@ header {
     min-height: 100vh;
 }
 
+/* Styling for Navbar section */
 .navbar {
     display: grid;
     grid-template-columns: 0.75fr 0.15fr 0.15fr 0.15fr;
     grid-template-rows: 1fr;
 
 }
+
+.nav-button {
+    height: 40px;
+    width: 100px;
+    border-radius: 20px;
+    place-self: center;
+    background-color: var(--sidebar-color);
+    color: var(--dashboard-text-color);
+    border-style: none;
+}
+
+/*Styling for User Info Section inside navbar.*/
+#user-info {
+    display: grid;
+    grid-template-rows: repeat(2, 40px);
+    grid-template-columns:0.2fr 1fr;
+    justify-content: start;
+    padding: 5%;
+    margin-bottom: 2%;
+}
+
+#user-info h1 {
+    place-self: start;
+    font-size: 1.5rem;
+}
+
+#user-info #profile-icon {
+    grid-row: span 2;
+}
+
+.name {
+    justify-self: center;
+}
+
+/*Styling for search bar section*/
 .search {
     display: grid;
     grid-column: 2;
@@ -41,17 +77,28 @@ header {
     grid-template-columns: 50px repeat(2, 1fr);
 }
 
+input[type=text] {
+    width: 500px;
+    height: 20px;
+    border-radius: 12px;
+    border-style: none;
+    place-self: center;
+    background-color: var(--search-bar-color);
+}
+
 #search-icon {
     justify-self: end;
     align-self: center;
 }
+
+/*Styling for Sidebar and Menu Items inside there.*/
 .sidebar {
     background-color: var(--sidebar-color);
     color: var(--dashboard-text-color);
     display: grid;
     grid-column: 1;
     grid-row: 1 / -1;
-    grid-template-rows: 0.2fr 0.5fr 1fr;
+    grid-template-rows: 0.25fr 0.5fr 1fr;
 }
 
 .sidebar-text {
@@ -78,6 +125,17 @@ header {
     padding-left: 20px;
 }
 
+/*Styling for header inside of dashboard in sidebar section.*/
+.dashboard-header {
+    display: grid;
+    grid-template-columns: 0.2fr 0.5fr;
+    padding-left: 10px;
+    align-items: center;
+    justify-items: center;
+    font-size: 1.5rem;
+}
+
+/*Styling for login section in top right corner of search bar section.*/
 #login-corner {
     display: grid;
     grid-template-columns: 0.1fr repeat(2, 0.2fr);
@@ -94,24 +152,7 @@ header {
     place-self: center;
 }
 
-#user-info {
-    display: grid;
-    grid-template-rows: repeat(2, 40px);
-    grid-template-columns:0.2fr 1fr;
-    justify-content: start;
-    padding: 5%;
-    margin-bottom: 2%;
-}
-
-#user-info h1 {
-    place-self: start;
-    font-size: 1.5rem;
-}
-
-#user-info #profile-icon {
-    grid-row: span 2;
-}
-
+/*Grid Container for all the main content of the page.*/
 .main-content {
     display: grid;
     gap: 25px 20px;
@@ -130,13 +171,8 @@ header {
     grid-row: 1;
     align-self: end;
 }
-.dashboard-header {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    align-items: center;
-    justify-items: center;
-}
 
+/*Styling for the section holding project cards in main-content.*/
 .projects {
     grid-column: 1 / 3;
     grid-row: 2 / -1;
@@ -161,6 +197,13 @@ header {
     align-self: start;
 }
 
+.icon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 40px);
+    justify-self: end;
+}
+
+/*Styling for Announcements container.*/
 .announcements {
     grid-column: 3;
     grid-row: 2 / 4;
@@ -180,6 +223,8 @@ header {
 .announcements p {
     font-size: 0.9rem;
 }
+
+/*Styling for Trending Container section.*/
 .trending {
     display: grid;
     grid-template-rows: 0.5fr 2fr;
@@ -206,40 +251,11 @@ header {
     background-color: var(--main-content-color);
 }
 
- .name {
-    justify-self: center;
-}
-
-.nav-button {
-    height: 40px;
-    width: 100px;
-    border-radius: 20px;
-    place-self: center;
-    background-color: var(--sidebar-color);
-    color: var(--dashboard-text-color);
-    border-style: none;
-}
-
 .main-header, .announcement-header, .trending-header {
     font-weight: bold;
     font-size: 1.2rem;
 }
 
-input[type=text] {
-    width: 500px;
-    height: 20px;
-    border-radius: 12px;
-    border-style: none;
-    place-self: center;
-    background-color: var(--search-bar-color);
-}
-
 .announcements, .card {
     padding: 5%;
-}
-
-.icon-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 40px);
-    justify-self: end;
 }
