@@ -118,7 +118,7 @@ header {
     grid-column: 2;
     grid-row: 2 / -1;
     grid-template-columns: 2fr 2fr 1fr;
-    grid-template-rows: 0.5fr repeat(4, minmax(180px,1fr));
+    grid-template-rows: 0.25fr repeat(4, minmax(180px,1fr));
     background-color: var(--main-content-color);
     align-content: space-evenly;
     padding-left: 3%;
@@ -144,16 +144,21 @@ header {
     gap: 20px 20px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 0.75fr);
+    margin-bottom: 2%;
 }
 
 .card {
     display: grid;
-    grid-template-rows: 0.5fr 150px 0.5fr;
+    grid-template-rows: 0.5fr 200px auto;
     align-items: center;
     justify-items: start;
     background-color: var(--dashboard-text-color);
     border-left:10px solid var(--card-border-color);
     
+}
+
+.card p {
+    align-self: start;
 }
 
 .announcements {
@@ -187,6 +192,12 @@ header {
     background-color: var(--dashboard-text-color);
     border-radius: 5px;
     row-gap: 10px;
+    padding: 5%;
+}
+
+.trending-card {
+   display: grid;
+   grid-template-columns: 50px 1fr;
 }
 
 .trending-header {
@@ -222,8 +233,8 @@ input[type=text] {
     background-color: var(--search-bar-color);
 }
 
-.announcements, .trending, .card {
-    padding: 20px;
+.announcements, .card {
+    padding: 5%;
 }
 
 .icon-grid {
